@@ -59,8 +59,6 @@ To run tests in a continuous-integration (CI) environment like GitHub Actions:
 yarn test:ci
 ```
 
-Let me update the automatic deploys 
-
   "build": "shopify hydrogen build",
     "start": "node --enable-source-maps dist/node/index.js",
 
