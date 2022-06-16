@@ -60,3 +60,10 @@ yarn test:ci
 ```
 
 Let me update the automatic deploys 
+
+  "build": "shopify hydrogen build",
+    "start": "node --enable-source-maps dist/node/index.js",
+
+      "engines": {
+    "node": "16.14"
+  },
