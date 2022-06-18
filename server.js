@@ -1,10 +1,21 @@
-import { hydrogenMiddleware } from '@shopify/hydrogen/middleware.js';
-import serveStatic from 'serve-static';
-import compression from 'compression';
-import bodyParser from 'body-parser';
-import express from 'express';
-import path from 'path';
-import { fileURLToPath } from 'url';
+//import { hydrogenMiddleware } from '@shopify/hydrogen/middleware';
+const { hydrogenMiddleware } = require('@shopify/hydrogen/middleware');
+//import serveStatic from 'serve-static';
+const serveStatic = require('serve-static');
+
+//import compression from 'compression';
+const compression = require('compression');
+
+//import bodyParser from 'body-parser';
+const bodyParser = require('body-parser');
+
+//import express from 'express';
+const express = require('express');
+
+//import path from 'path';
+const path = require('path');
+
+//import { fileURLToPath } from 'url';
 
 const port = process.env.PORT || 8080;
 
@@ -14,8 +25,8 @@ const app = express();
 // Add desired middlewares and handle static assets
 app.use(compression());
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+//const __filename = fileURLToPath(import.meta.url);
+//const __dirname = path.dirname(__filename);
 app.use(serveStatic(path.resolve(__dirname, '../', 'client'), { index: false }));
 
 app.use(bodyParser.raw({ type: '*/*' }));
@@ -33,9 +44,6 @@ app.use(
 app.use((req, res) => {
  res.send(`<h1 styles={text-align: 'center'}>LOOKCOOL APP</h1>`);
 })
-
-
-console.log(__dirname);
 
 app.listen(port, () => {
  console.log(`Hydrogen server running at http://localhost:${port}`);

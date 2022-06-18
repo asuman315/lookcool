@@ -7,7 +7,6 @@
   "engines": {
     "node": "16.14"
   },
-  "type": "module",
   "scripts": {
     "dev": "shopify hydrogen dev",
     "build": "shopify hydrogen build --entry src/App.server --target node",
