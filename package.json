@@ -1,5 +1,5 @@
 {
-  "name": "yourbestbuy",
+  "name": "lookcool",
   "description": "Ecommerce website for buying electronics built with hydrogen framework",
   "version": "0.0.0",
   "license": "MIT",
@@ -10,7 +10,7 @@
   "scripts": {
     "dev": "shopify hydrogen dev",
     "build": "shopify hydrogen build",
-    "start": "node --enable-source-maps dist/server.js",
+    "start": "node --enable-source-maps dist/node",
     "preview": "shopify hydrogen preview",
     "lint": "eslint --resolve-plugins-relative-to . --no-error-on-unmatched-pattern --ext .js,.ts,.jsx,.tsx src",
     "test": "WATCH=true vitest",
