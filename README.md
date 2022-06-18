@@ -69,3 +69,13 @@ yarn test:ci
   "build": "npm run build:client && npm run build:ssr",
     "build:client": "vite build --outDir dist/client --manifest",
     "build:ssr": "cross-env WORKER=true vite build --ssr @netlify/hydrogen-platform/handler",
+
+import { fileURLToPath } from 'url';
+    
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+
+app.use((req, res) => {
+ res.send(`<h1 styles={text-align: 'center'}>LOOKCOOL APP</h1>`);
+})

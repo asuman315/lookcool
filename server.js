@@ -1,27 +1,21 @@
-//import { hydrogenMiddleware } from '@shopify/hydrogen/middleware';
-const { hydrogenMiddleware } = require('@shopify/hydrogen/middleware');
+//import { hydrogenMiddleware } from '@shopify/hydrogen/middleware.js';
+const { hydrogenMiddleware } = require('@shopify/hydrogen/middleware.js');
 //import serveStatic from 'serve-static';
 const serveStatic = require('serve-static');
-
 //import compression from 'compression';
 const compression = require('compression');
-
 //import bodyParser from 'body-parser';
 const bodyParser = require('body-parser');
-
-//import express from 'express';
-const express = require('express');
-
+//import connect from 'connect';
+const connect = require('connect');
 //import path from 'path';
 const path = require('path');
-
 //import { fileURLToPath } from 'url';
+const { fileURLToPath } = require('url');
 
 const port = process.env.PORT || 8080;
-
 // Initialize your own server framework like connect
-const app = express();
-
+const app = connect();
 // Add desired middlewares and handle static assets
 app.use(compression());
 
@@ -41,9 +35,9 @@ app.use(
  })
 );
 
-app.use((req, res) => {
- res.send(`<h1 styles={text-align: 'center'}>LOOKCOOL APP</h1>`);
-})
+// app.use((req, res) => {
+//  res.send(`<h1 styles={text-align: 'center'}>LOOKCOOL APP</h1>`);
+// })
 
 app.listen(port, () => {
  console.log(`Hydrogen server running at http://localhost:${port}`);

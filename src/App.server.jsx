@@ -34,3 +34,5 @@ function App() {
 }
 
 export default renderHydrogen(App);
+
+//module.exports = renderHydrogen(App);

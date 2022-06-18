@@ -11,6 +11,7 @@
     "dev": "shopify hydrogen dev",
     "build": "shopify hydrogen build --entry src/App.server --target node",
     "start": "node server.js",
+    "local": "nodemon server.js",
     "preview": "shopify hydrogen preview",
     "lint": "eslint --resolve-plugins-relative-to . --no-error-on-unmatched-pattern --ext .js,.ts,.jsx,.tsx src",
     "test": "WATCH=true vitest",
