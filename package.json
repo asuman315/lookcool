@@ -7,10 +7,11 @@
   "engines": {
     "node": "16.14"
   },
+  "type": "module",
   "scripts": {
     "dev": "shopify hydrogen dev",
-    "build": "shopify hydrogen build",
-    "start": "node --enable-source-maps dist/node",
+    "build": "shopify hydrogen build --entry src/App.server --target node",
+    "start": "node server.js",
     "preview": "shopify hydrogen preview",
     "lint": "eslint --resolve-plugins-relative-to . --no-error-on-unmatched-pattern --ext .js,.ts,.jsx,.tsx src",
     "test": "WATCH=true vitest",
@@ -39,6 +40,7 @@
     "@shopify/hydrogen": "^0.24.0",
     "body-parser": "^1.20.0",
     "compression": "^1.7.4",
+    "express": "^4.18.1",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "serve-static": "^1.15.0"
