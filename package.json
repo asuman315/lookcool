@@ -9,7 +9,7 @@
   },
   "scripts": {
     "dev": "shopify hydrogen dev",
-    "build": "--entry server --target node",
+    "build": "yarn build --entry server --target node",
     "start": "node server.js",
     "local": "nodemon server.js",
     "preview": "shopify hydrogen preview",
