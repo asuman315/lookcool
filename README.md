@@ -60,7 +60,6 @@ yarn test:ci
 ```
 
   "build": "shopify hydrogen build",
-    "start": "node --enable-source-maps dist/node/index.js",
 
       "engines": {
     "node": "16.14"
